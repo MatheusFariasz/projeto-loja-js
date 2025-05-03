@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./imagens/icons8-buying-100.png">
+    <title>Simulador de Compras</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="./index.html"><img src="./imagens/Group 1.svg" alt="Logo MGV Store"></a>
+        </div>
+        <h1>Lista de Compras</h1>
+    </header>
+
+    <form class="form1" id="formPessoa">
+        <div class="cards-container">
+            <div class="card">
+                <h2>Cadastrar pessoa</h2>
+                <label for="pessoas">Nome</label>
+                <input type="text" name="pessoas" placeholder="Digite o nome" id="pessoas">
+                <button id="botaoPessoa" onclick="cadastrarPessoas(e)">Cadastrar</button>
+                <p id="pessoa"></p>
+            </div>
+
+            <div class="card">
+                <h2>Comprar Produto</h2>
+                <label for="ComprasPessoas">Pessoa</label>
+
+                <select name="ComprasPessoas" id="ComprasPessoas">
+                  <option value="">Selecione uma pessoa</option>
+              </select>
+
+                <label for="ComprasPessoas">Produto</label>
+                <select name="ComprarProduto" id="ComprarProduto">
+                  <option value="">Selecione um produto</option>
+              </select>
+                <button type="button" onclick="realizarCompra()">Comprar</button>
+
+            </div>
+    </form>
+    <div class="cardTabela">
+        <table>
+            <h2>Lista de Pessoas</h2>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Produtos</th>
+                    <th>Total</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaPessoas">
+                <tr>
+                    <td>1</td>
+                    <td>Vinicius</td>
+                    <td>
+                        <ul class="liProdutos"></ul>
+                    </td>
+                    <td>0.00</td>
+                    <td class="options">
+                        <button class="botaoRemover">Remover</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Gabriel</td>
+                    <td>
+                        <ul class="liProdutos"></ul>
+                    </td>
+                    <td>0.00</td>
+                    <td class="options">
+                        <button class="botaoRemover">Remover</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Matheus</td>
+                    <td>
+                        <ul class="liProdutos"></ul>
+                    </td>
+                    <td>0.00</td>
+                    <td class="options">
+                        <button class="botaoRemover">Remover</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+    </form>
+    <form id="formProduto">
+        <div>
+            <div class="card">
+                <h2>Cadastrar produto</h2>
+                <label for="produto">Produto</label>
+                <input type="text" placeholder="Digite o produto" name="product" id="produto">
+                <label for="preco">Preço</label>
+                <input type="number" placeholder="Digite o preço" minlength="0" name="price" id="preco" step=".01">
+                <button type="submit" id="botaoProduto">Cadastrar</button>
+            </div>
+            <p id="p"></p>
+
+    </form>
+    <div class="cardTabela">
+        <table>
+            <h2>Lista de Produtos</h2>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaProdutos">
+                <tr>
+                    <td>1</td>
+                    <td>Mouse Gamer</td>
+                    <td>149,90</td>
+                    <td class="options">
+                        <button class="botaoMais">+ Preço</button>
+                        <button class="botaoMenos">- Preço</button>
+                        <button class="botaoRemover">Remover</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Teclado Mecânico</td>
+                    <td>299,99</td>
+                    <td class="options">
+                        <button class="botaoMais">+ Preço</button>
+                        <button class="botaoMenos">- Preço</button>
+                        <button class="botaoRemover">Remover</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+    </form>
+
+    <script src="codigo.js"></script>
+
+</body>
+
+</html>
