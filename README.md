@@ -54,6 +54,4 @@ Este arquivo documenta os pontos de melhoria destacados pelo professor **Thiago 
 
 ---
 
-## 🙏 Agradecimento
-
 Agradecemos ao professor **Thiago Trojahn** pelo feedback construtivo! Esses apontamentos serão fundamentais para a melhoria do nosso projeto e do nosso aprendizado em desenvolvimento web.
